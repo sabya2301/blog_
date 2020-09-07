@@ -1,0 +1,9 @@
+nav{
+	display: flex;
+	flex-direction: flex-end;
+	background-color: red;
+}
+
+nav li{
+	padding-left: 10px;
+}

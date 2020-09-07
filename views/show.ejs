@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+<h1><%= foundBlog.title %></h1>
+<img class= "showPageImg"src="<%= foundBlog.image %>">
+<h4><%= foundBlog.created %></h4>
+<p><%- foundBlog.body %></p>
+
+<a href="/blogs/<%= foundBlog._id%>/edit">Edit</a>
+<form action="/blogs/<%= foundBlog._id%>?_method=DELETE" method="POST">
+	<button>Delete</button>
+</form>
+
+<%- include("partials/footer.ejs") %>

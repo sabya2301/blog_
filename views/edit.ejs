@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+	<h3 id="newBlog">Edit Page for "<%= editBlog.title %>"</h3>
+	<form action="/blogs/<%= editBlog._id %>?_method=PUT" method="POST">
+		<input type="text" name="blog[title]" placeholder="Name" value="<%= editBlog.title %>">
+		<input type="text" name="blog[image]" placeholder="Image" value="<%= editBlog.image %>">
+		<textarea name="blog[body]" placeholder="Description"><%= editBlog.body%></textarea>  
+		<div id="submitDiv"><input type="submit" name="submit" value="Submit"></div>
+	</form>
+</div>
+<%- include("partials/footer.ejs") %>

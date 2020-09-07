@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+	<h3 id="newBlog">New Blog</h3>
+	<form action="/blogs" method="POST">
+		<input type="text" name="blog[title]" placeholder="Name">
+		<input type="text" name="blog[image]" placeholder="Image">
+		<textarea name="blog[body]" placeholder="Description"></textarea>  
+		<div id="submitDiv"><input type="submit" name="submit" value="Submit"></div>
+		
+	</form>
+</div>
+<%- include("partials/footer.ejs") %>

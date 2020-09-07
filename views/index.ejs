@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div id="indexPage">
+	<%  for(var i =0 ; i<blogs.length ; i++){ %>
+		<div class="contents">
+			<h2><%= blogs[i].title %></h2>
+			<img src= "<%= blogs[i].image %>">
+			<li class="indexPageblogID">Image ID: <%= blogs[i].id %> </li>
+			<p><%- blogs[i].body.substring(0,50) %>...</p>
+			<a href="/blogs/<%= blogs[i]._id %>">Read More></a>
+
+		</div>
+	<% } %>
+</div> 
+
+<%- include("partials/footer.ejs") %>
